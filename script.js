@@ -1,45 +1,167 @@
-function ouvrirDossier(){
-    document.getElementById("ecranDemarrage").style.display = "none";
-    document.getElementById("dossier").style.display = "block";
+/* ===================================== */
+/* CONFIGURATION */
+/* ===================================== */
 
-    const firstBtn = document.querySelector(".menu button");
-    ouvrirOnglet("infos", firstBtn);
+const PASSWORD = "ARAKISS";
+
+/* ===================================== */
+/* HUB 1 : MOT DE PASSE AUTO */
+/* ===================================== */
+
+function lancerAnimationMotDePasse() {
+
+    const display =
+        document.getElementById("passwordDisplay");
+
+    const bouton =
+        document.getElementById("btnEnter");
+
+    let index = 0;
+
+    const interval = setInterval(() => {
+
+        index++;
+
+        display.innerHTML +=
+            "*".repeat(index) + "<br>";
+
+        if (index >= PASSWORD.length) {
+
+            clearInterval(interval);
+
+            bouton.style.display = "block";
+        }
+
+    }, 400);
+
 }
 
-function ouvrirOnglet(id, bouton){
+/* ===================================== */
+/* HUB 2 : CHARGEMENT */
+/* ===================================== */
 
-    document.querySelectorAll(".onglet").forEach(o => {
-        o.style.display = "none";
-    });
+function lancerChargement() {
 
-    const target = document.getElementById(id);
-    if(target) target.style.display = "block";
+    document.getElementById("passwordHub")
+        .style.display = "none";
 
-    document.querySelectorAll(".menu button").forEach(b => {
-        b.classList.remove("actif");
-    });
+    document.getElementById("loadingHub")
+        .style.display = "flex";
 
-    if(bouton) bouton.classList.add("actif");
+    const barre =
+        document.getElementById("progressionBar");
+
+    const texte =
+        document.getElementById("loadingText");
+
+    let progression = 0;
+
+    const interval = setInterval(() => {
+
+        progression += 1;
+
+        barre.style.width =
+            progression + "%";
+
+        /* Messages */
+
+        if (progression === 10)
+            texte.innerText =
+            "Analyse du noyau impérial...";
+
+        if (progression === 20)
+            texte.innerText =
+            "Vérification des accès...";
+
+        if (progression === 30)
+            texte.innerText =
+            "Décryptage des archives...";
+
+        if (progression === 40)
+            texte.innerText =
+            "Connexion au Cybertron Core...";
+
+        if (progression === 50)
+            texte.innerText =
+            "Chargement des données ARAKISS...";
+
+        if (progression === 60)
+            texte.innerText =
+            "Synchronisation des protocoles...";
+
+        if (progression === 70)
+            texte.innerText =
+            "Ouverture des bases impériales...";
+
+        if (progression === 80)
+            texte.innerText =
+            "Accès aux fichiers classifiés...";
+
+        if (progression === 90)
+            texte.innerText =
+            "Validation finale...";
+
+        if (progression >= 100) {
+
+            clearInterval(interval);
+
+            texte.innerText =
+            "ACCÈS AUTORISÉ";
+
+            setTimeout(() => {
+
+                document.getElementById("loadingHub")
+                    .style.display = "none";
+
+                document.getElementById("dossier")
+                    .style.display = "block";
+
+            }, 1200);
+        }
+
+    }, 50);
 }
+
+/* ===================================== */
+/* ONGLETS */
+/* ===================================== */
+
+function ouvrirOnglet(id) {
+
+    document
+        .querySelectorAll(".onglet")
+        .forEach(onglet => {
+
+            onglet.classList.remove("actif");
+
+        });
+
+    document
+        .getElementById(id)
+        .classList.add("actif");
+}
+
+/* ===================================== */
+/* DÉMARRAGE */
+/* ===================================== */
 
 window.onload = () => {
 
-    const texte = document.getElementById("texteIntro");
-    const bouton = document.querySelector("#ecranDemarrage button");
+    document.getElementById("passwordHub")
+        .style.display = "flex";
 
-    bouton.style.display = "none";
+    document.getElementById("loadingHub")
+        .style.display = "none";
 
-    setTimeout(() => texte.innerText = "Connexion au réseau Cybertron...", 2000);
-    setTimeout(() => texte.innerText = "Analyse des systèmes sécurisés...", 5000);
-    setTimeout(() => texte.innerText = "Décryptage des archives classifiées...", 8000);
-    setTimeout(() => texte.innerText = "⚠ DOSSIER HAUTEMENT CLASSIFIÉ ⚠", 11000);
+    document.getElementById("dossier")
+        .style.display = "none";
 
-    setTimeout(() => {
-        texte.innerText = "Êtes-vous certain de vouloir ouvrir ce fichier ?";
-    }, 14000);
+    lancerAnimationMotDePasse();
 
-    setTimeout(() => {
-        bouton.style.display = "inline-block";
-        bouton.innerText = "OUI - ACCÉDER AU DOSSIER";
-    }, 16000);
+    document
+        .getElementById("btnEnter")
+        .addEventListener(
+            "click",
+            lancerChargement
+        );
 };
