@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <title>Dossier Cybertronien - Arakiss</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./Dossier Cybertronien - Arakiss_files/style.css">
 </head>
 
 <body>
@@ -12,11 +12,11 @@
 <div id="ecranDemarrage">
 
     <div class="terminal">
-        <img src="logo.png" class="logo">
+        <img src="./Dossier Cybertronien - Arakiss_files/logo.png" class="logo">
 
         <h1>ACCÈS À LA BASE DE DONNÉES</h1>
 
-        <p id="texteIntro"></p>
+        <p id="texteIntro">Êtes-vous certain de vouloir ouvrir ce fichier ?</p>
 
         <div class="barre">
             <div class="progression"></div>
@@ -27,7 +27,7 @@
         <p class="sousTitre">Descendant de Nova Prime</p>
         <p class="danger">⚠ DOSSIER DANGEREUX ⚠</p>
 
-        <button onclick="ouvrirDossier()">OUI - OUVRIR LE DOSSIER</button>
+        <button onclick="ouvrirDossier()" style="display: inline-block;">OUI - ACCÉDER AU DOSSIER</button>
     </div>
 
 </div>
@@ -38,21 +38,21 @@
     <div class="container">
 
         <div class="header">
-            <img src="logo.png" class="logo">
+            <img src="./Dossier Cybertronien - Arakiss_files/logo.png" class="logo">
             <h1>DOSSIER CYBERTRONIEN</h1>
         </div>
 
         <!-- MENU -->
         <div class="menu">
-            <button onclick="ouvrirOnglet('infos', this)">Informations</button>
-            <button onclick="ouvrirOnglet('psy', this)">Psychologie</button>
-            <button onclick="ouvrirOnglet('physique', this)">Physique</button>
-            <button onclick="ouvrirOnglet('capacites', this)">Capacités</button>
-            <button onclick="ouvrirOnglet('armement', this)">Armement</button>
-            <button onclick="ouvrirOnglet('faiblesses', this)">Faiblesses</button>
-            <button onclick="ouvrirOnglet('altmode', this)">Alt-Mode</button>
-            <button onclick="ouvrirOnglet('histoire', this)">Histoire</button>
-            <button onclick="ouvrirOnglet('images', this)">Images</button>
+            <button onclick="ouvrirOnglet(&#39;infos&#39;, this)">Informations</button>
+            <button onclick="ouvrirOnglet(&#39;psy&#39;, this)">Psychologie</button>
+            <button onclick="ouvrirOnglet(&#39;physique&#39;, this)">Physique</button>
+            <button onclick="ouvrirOnglet(&#39;capacites&#39;, this)">Capacités</button>
+            <button onclick="ouvrirOnglet(&#39;armement&#39;, this)">Armement</button>
+            <button onclick="ouvrirOnglet(&#39;faiblesses&#39;, this)">Faiblesses</button>
+            <button onclick="ouvrirOnglet(&#39;altmode&#39;, this)">Alt-Mode</button>
+            <button onclick="ouvrirOnglet(&#39;histoire&#39;, this)">Histoire</button>
+            <button onclick="ouvrirOnglet(&#39;images&#39;, this)">Images</button>
         </div>
 
         <!-- INFOS -->
@@ -311,13 +311,51 @@
         <div id="images" class="onglet">
             <div class="section">
                 <h2>Images</h2>
-                <img src="robot.png" width="300">
+                <img src="./Dossier Cybertronien - Arakiss_files/robot.png" width="300">
             </div>
         </div>
 
     </div>
 </div>
 
-<script src="script.js"></script>
-</body>
-</html>
+<script src="./Dossier Cybertronien - Arakiss_files/script.js.téléchargé"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
