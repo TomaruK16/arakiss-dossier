@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dossier Cybertronien - Arakiss</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ECRAN DE DEMARRAGE -->
+
+    <div id="ecranDemarrage">
+
+        <div class="terminal">
+
+            <img src="logo.png" class="logo">
+
+            <h1>ACCÈS À LA BASE DE DONNÉES</h1>
+
+            <p>Ouverture du fichier...</p>
+
+            <div class="barre">
+                <div class="progression"></div>
+            </div>
+
+            <h2>ARAKISS</h2>
+
+            <p class="sousTitre">
+                Descendant de Nova Prime
+            </p>
+
+            <p class="danger">
+                ⚠ DOSSIER DANGEREUX ⚠
+            </p>
+
+            <p>
+                Êtes-vous certain de vouloir ouvrir ce fichier ?
+            </p>
+
+            <button onclick="ouvrirDossier()">
+                OUI - OUVRIR LE DOSSIER
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- DOSSIER -->
+
+    <div id="dossier">
+
+        <div class="container">
+
+            <div class="header">
+
+                <img src="logo.png" class="logo">
+
+                <h1>DOSSIER CYBERTRONIEN</h1>
+
+            </div>
+
+            <div class="menu">
+
+                <button onclick="ouvrirOnglet('infos', this)">Informations</button>
+
+                <button onclick="ouvrirOnglet('psy', this)">Psychologie</button>
+
+                <button onclick="ouvrirOnglet('physique', this)">Physique</button>
+
+                <button onclick="ouvrirOnglet('capacites', this)">Capacités</button>
+
+                <button onclick="ouvrirOnglet('armement', this)">Armement</button>
+
+                <button onclick="ouvrirOnglet('extra', this)">Extra</button>
+
+                <button onclick="ouvrirOnglet('faiblesses', this)">Faiblesses</button>
+
+                <button onclick="ouvrirOnglet('altmode', this)">Alt-Mode</button>
+
+                <button onclick="ouvrirOnglet('histoire', this)">Histoire</button>
+
+                <button onclick="ouvrirOnglet('images', this)">Images</button>
+
+            </div>
+
+            <div id="infos" class="onglet">
+
+                <div class="section">
+
+                    <h2>Informations Générales</h2>
+
+                    <p><strong>Désignation :</strong> Arakiss</p>
+
+                    <p><strong>Affiliation :</strong> Neutre</p>
+
+                    <p><strong>Sous clan :</strong> Imperarcons</p>
+
+                    <p><strong>Rôle :</strong> Leader, Empereur</p>
+
+                    <p><strong>Âge  :</strong> 17Millions d'années</p>
+
+                </div>
+
+            </div>
+
+            <div id="psy" class="onglet">
+
+    <div class="section">
+
+        <h2>PROFIL PSYCHOLOGIQUE</h2>
+
+        <h3>Caractère</h3>
+
+        <p>
+            Arakiss possède une présence naturelle qui inspire autant le respect
+            que la méfiance. Héritier de l'idéal de Nova Prime, il croit fermement
+            que les Cybertroniens sont destinés à accomplir de grandes choses et
+            refuse de se contenter de la médiocrité.
+        </p>
+
+        <p>
+            Ambitieux et déterminé, il poursuit ses objectifs avec une volonté
+            presque inébranlable. Cependant, à l'image de Sentinel Prime,
+            Arakiss considère que certaines décisions difficiles doivent être prises
+            pour le bien commun, même lorsqu'elles sont moralement discutables.
+        </p>
+
+        <p>
+            Pragmatique et rarement guidé par ses émotions, il privilégie
+            l'efficacité aux sentiments. Cette manière de penser lui attire autant
+            l'admiration que la méfiance de ceux qui l'entourent.
+        </p>
+
+        <p>
+            Malgré cette froideur apparente, Arakiss possède un profond sens du
+            devoir envers son peuple. Il ne recherche pas le pouvoir pour lui-même,
+            mais parce qu'il estime être capable de guider Cybertron vers un avenir
+            meilleur. Cette conviction peut toutefois se transformer en arrogance
+            lorsqu'il est persuadé d'avoir raison.
+        </p>
+
+        <hr>
+
+        <h3>Comportement</h3>
+
+        <p>
+            En mission, Arakiss affiche un calme impressionnant et conserve son
+            sang-froid même dans les situations les plus critiques.
+        </p>
+
+        <p>
+            Il analyse rapidement les informations à sa disposition avant d'agir,
+            préférant élaborer une stratégie plutôt que de foncer tête baissée.
+            Son esprit tactique lui permet souvent d'anticiper les mouvements de
+            ses adversaires.
+        </p>
+
+        <p>
+            Face à ses alliés, il se montre exigeant et attend un haut niveau de
+            discipline. Il récompense le mérite et la compétence mais supporte
+            difficilement l'incompétence ou l'insubordination.
+        </p>
+
+        <p>
+            Avec ses ennemis, Arakiss privilégie la diplomatie lorsqu'elle sert
+            ses intérêts, mais il n'hésite pas à employer une force écrasante
+            lorsque cela devient nécessaire.
+        </p>
+
+        <p>
+            Sa plus grande faiblesse psychologique réside dans sa certitude
+            d'agir pour le bien commun. Cette conviction peut parfois le rendre
+            aveugle aux avis contraires et le pousser à prendre des décisions
+            qu'il juge justifiées, même lorsqu'elles comportent des risques
+            considérables.
+        </p>
+
+    </div>
+
+</div>
+
+            </div>
+
+            <div id="physique" class="onglet">
+
+                <div class="section">
+
+                    <h2>Description Physique</h2>
+
+                    <p>À compléter...</p>
+
+                </div>
+
+            </div>
+
+            <div id="capacites" class="onglet">
+
+                <div class="section">
+
+                    <h2>Capacités</h2>
+
+                    <p>À compléter...</p>
+
+                </div>
+
+            </div>
+
+            <div id="armement" class="onglet">
+
+                <div class="section">
+
+                    <h2>Armement</h2>
+
+                    <p>À compléter...</p>
+
+                </div>
+
+            </div>
+
+            <div id="extra" class="onglet">
+
+                <div class="section">
+
+                    <h2>Capacités Extra</h2>
+
+                    <p>À compléter...</p>
+
+                </div>
+
+            </div>
+
+            <div id="faiblesses" class="onglet">
+
+                <div class="section">
+
+                    <h2>Faiblesses</h2>
+
+                    <p>À compléter...</p>
+
+                </div>
+
+            </div>
+
+            <div id="altmode" class="onglet">
+
+                <div class="section">
+
+                    <h2>Alt-Mode</h2>
+
+                    <p>À compléter...</p>
+
+                </div>
+
+            </div>
+
+            <div id="histoire" class="onglet">
+
+                <div class="section">
+
+                    <h2>Histoire</h2>
+
+                    <p>À compléter...</p>
+
+                </div>
+
+            </div>
+
+            <div id="images" class="onglet">
+
+                <div class="section">
+
+                    <h2>Images</h2>
+
+                    <img src="robot.png" width="300">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
