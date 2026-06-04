@@ -5,15 +5,13 @@ body{
     font-family:Arial,sans-serif;
 }
 
-/* ECRAN DEMARRAGE */
-
 #ecranDemarrage{
     position:fixed;
     inset:0;
-    background:black;
     display:flex;
     justify-content:center;
     align-items:center;
+    background:black;
 }
 
 .terminal{
@@ -23,22 +21,11 @@ body{
     border:2px solid #ffbd1b;
     padding:40px;
     box-shadow:0 0 30px #ffbd1b;
-    background:black;
 }
 
 .logo{
     width:150px;
     margin-bottom:20px;
-}
-
-.sousTitre{
-    font-size:20px;
-}
-
-.danger{
-    color:red;
-    font-size:22px;
-    font-weight:bold;
 }
 
 .barre{
@@ -49,16 +36,19 @@ body{
 }
 
 .progression{
+    width:0;
     height:100%;
     background:#ffbd1b;
-    animation:chargement 4s linear;
-    width:100%;
+    animation:load 16s linear forwards;
 }
 
-@keyframes chargement{
+@keyframes load{
     from{width:0;}
     to{width:100%;}
 }
+
+.sousTitre{font-size:20px;}
+.danger{color:red;font-weight:bold;font-size:22px;}
 
 button{
     background:black;
@@ -66,6 +56,7 @@ button{
     border:1px solid #ffbd1b;
     padding:12px 20px;
     cursor:pointer;
+    display:none;
 }
 
 button:hover{
@@ -73,21 +64,11 @@ button:hover{
     color:black;
 }
 
-/* DOSSIER */
+#dossier{display:none;}
 
-#dossier{
-    display:none;
-}
+.container{width:90%;margin:auto;padding:20px;}
 
-.container{
-    width:90%;
-    margin:auto;
-    padding:20px;
-}
-
-.header{
-    text-align:center;
-}
+.header{text-align:center;}
 
 .menu{
     display:flex;
@@ -97,17 +78,17 @@ button:hover{
     margin:30px 0;
 }
 
-.onglet{
-    display:none;
+.menu button{display:block;}
+
+.menu button.actif{
+    background:#ffbd1b;
+    color:black;
 }
+
+.onglet{display:none;}
 
 .section{
     border:2px solid #ffbd1b;
     padding:25px;
-    background:black;
     box-shadow:0 0 15px #ffbd1b;
-}
-
-h1,h2{
-    text-transform:uppercase;
 }
