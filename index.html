@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dossier Cybertronien - Arakiss Prime</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
 <div id="passwordHub">
 
     <h1>🔒 ACCÈS CYBERTRON CORE</h1>
@@ -32,11 +46,15 @@
 
     <div class="header">
 
-        <h1>ARCHIVES CYBERTRONIENNES</h1>
+    <img src="logo.png"
+         alt="Logo Imperarcon"
+         class="logo-imperarcon">
 
-        <p>FICHE STRATÉGIQUE : ARAKISS</p>
+    <h1>ARCHIVES CYBERTRONIENNES</h1>
 
-    </div>
+    <p>FICHE STRATÉGIQUE : ARAKISS PRIME</p>
+
+</div>
 
     <div class="menu">
 
@@ -60,6 +78,10 @@
             Armement
         </button>
 
+        <button onclick="ouvrirOnglet('altmode')">
+            Alt Mode
+        </button>
+
         <button onclick="ouvrirOnglet('faiblesses')">
             Faiblesses
         </button>
@@ -74,7 +96,7 @@
 
     <h2>Informations Générales</h2>
 
-    <p><strong>Désignation :</strong> Arakiss</p>
+    <p><strong>Désignation :</strong> Arakiss Prime</p>
 
     <p><strong>Origine :</strong> Cybertron</p>
 
@@ -120,9 +142,9 @@
         <img src="arakiss.png" alt="Arakiss">
     </div>
 
-    <p><strong>Taille :</strong> 14 mètres</p>
+    <p><strong>Taille :</strong> 10;4 mètres</p>
 
-    <p><strong>Poids :</strong> 42 tonnes</p>
+    <p><strong>Poids :</strong> 38 tonnes</p>
 
     <p><strong>Structure :</strong> Châssis Cybertronien de classe impériale renforcé par des alliages antiques.</p>
 
@@ -176,7 +198,7 @@
 
     <p><strong>Épée de Nova Prime :</strong> Arme légendaire transmise par Nova Prime lui-même. Forgée à l'âge d'or de Cybertron, elle est capable de trancher la plupart des alliages cybertroniens.</p>
 
-    <p><strong>Bouclier Énergétique Adaptatif :</strong> Génère une barrière capable d'absorber et de redistribuer une partie de l'énergie des attaques ennemies.</p>
+    <p><strong>Bouclier Énergétique Adaptatif :</strong> Ses ailes se détache de son dos qui sont capablent d'absorber et de redistribuer une partie de l'énergie des attaques ennemies.</p>
 
     <p><strong>Lames Rétractables :</strong> Dissimulées dans ses avant-bras, elles peuvent être déployées instantanément lors des combats rapprochés.</p>
 
@@ -191,6 +213,47 @@
     <h2>Artefact Hérité</h2>
 
     <p><strong>Relique de Nova Prime :</strong> Objet ancien dont les capacités complètes restent inconnues. Arakiss est l'un des rares êtres capables de l'utiliser sans subir ses effets secondaires.</p>
+
+</div>
+
+<div id="altmode" class="onglet">
+
+    <h2>Modes Alternatifs</h2>
+
+    <h3>Mode Camion Impérial</h3>
+
+    <p>
+        Le modèle terrestre correspondant est un
+        <strong>Freightliner FL86 Custom</strong>,
+        largement modifié avec une technologie Imperarcon.
+    </p>
+
+    <p>
+        Ce mode lui permet de voyager rapidement sur de longues distances tout en conservant un blindage extrêmement élevé.
+    </p>
+
+    <div class="image-arakiss">
+        <img src="camion.png" alt="Mode Camion Arakiss">
+    </div>
+
+    <h3>Mode Chasseur Aérien</h3>
+
+    <p>
+        Son second mode alternatif est un chasseur de supériorité aérienne inspiré du
+        <strong>Sukhoi Su-57 Felon</strong>.
+    </p>
+
+    <p>
+        Dans sa version Imperarcon, l'appareil possède un blindage renforcé, des moteurs énergétiques améliorés et une livrée verte impériale.
+    </p>
+
+    <p>
+        Ce mode est utilisé pour les missions d'interception, de reconnaissance et de domination aérienne.
+    </p>
+
+    <div class="image-arakiss">
+        <img src="su57.png" alt="Mode Su-57 Arakiss">
+    </div>
 
 </div>
 
@@ -301,3 +364,8 @@
     </p>
 
 </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

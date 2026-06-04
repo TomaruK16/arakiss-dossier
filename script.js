@@ -2,19 +2,16 @@
 /* CONFIGURATION */
 /* ===================================== */
 
-const PASSWORD = "ARAKISS";
+const PASSWORD_LENGTH = 7;
 
 /* ===================================== */
-/* HUB 1 : MOT DE PASSE AUTO */
+/* MOT DE PASSE AUTOMATIQUE */
 /* ===================================== */
 
 function lancerAnimationMotDePasse() {
 
-    const display =
-        document.getElementById("passwordDisplay");
-
-    const bouton =
-        document.getElementById("btnEnter");
+    const display = document.getElementById("passwordDisplay");
+    const btnEnter = document.getElementById("btnEnter");
 
     let index = 0;
 
@@ -22,91 +19,102 @@ function lancerAnimationMotDePasse() {
 
         index++;
 
-        display.innerHTML +=
-            "*".repeat(index) + "<br>";
+        display.textContent = "*".repeat(index);
 
-        if (index >= PASSWORD.length) {
+        if (index >= PASSWORD_LENGTH) {
 
             clearInterval(interval);
 
-            bouton.style.display = "block";
+            btnEnter.style.display = "inline-block";
         }
 
-    }, 400);
-
+    }, 600);
 }
 
 /* ===================================== */
-/* HUB 2 : CHARGEMENT */
+/* CHARGEMENT CYBERTRONIEN */
 /* ===================================== */
 
 function lancerChargement() {
 
-    document.getElementById("passwordHub")
-        .style.display = "none";
+    document.getElementById("passwordHub").style.display = "none";
 
-    document.getElementById("loadingHub")
-        .style.display = "flex";
+    document.getElementById("loadingHub").style.display = "flex";
 
-    const barre =
-        document.getElementById("progressionBar");
+    const barre = document.getElementById("progressionBar");
+    const texte = document.getElementById("loadingText");
 
-    const texte =
-        document.getElementById("loadingText");
+    const messages = [
+
+        "Initialisation Cybertron Core...",
+        "Chargement du noyau principal...",
+        "Connexion aux archives...",
+        "Vérification des protocoles...",
+        "Analyse du système...",
+        "Synchronisation impériale...",
+        "Connexion au réseau Imperarcon...",
+        "Lecture des données sécurisées...",
+        "Décryptage des accès...",
+        "Analyse des signatures énergétiques...",
+        "Chargement des modules tactiques...",
+        "Validation de l'identité...",
+        "Scan des archives galactiques...",
+        "Chargement des bases de données...",
+        "Lecture des protocoles Omega...",
+        "Connexion aux systèmes anciens...",
+        "Analyse des fichiers classifiés...",
+        "Détection des archives Nova Prime...",
+        "Déverrouillage des accès...",
+        "Synchronisation des données...",
+        "Analyse des systèmes militaires...",
+        "Chargement du dossier ARAKISS...",
+        "Lecture du profil stratégique...",
+        "Compilation des informations...",
+        "Analyse psychologique...",
+        "Analyse physique...",
+        "Analyse des capacités...",
+        "Analyse de l'armement...",
+        "Analyse des l'Alt Mods...",
+        "Analyse des faiblesses...",
+        "Connexion aux archives impériales...",
+        "Validation des données...",
+        "Mise à jour des registres...",
+        "Contrôle de l'intégrité...",
+        "Préparation du terminal...",
+        "Chargement des historiques...",
+        "Connexion sécurisée...",
+        "Lecture des rapports anciens...",
+        "Analyse des campagnes militaires...",
+        "Chargement du statut impérial...",
+        "Préparation de l'interface...",
+        "Ouverture des archives...",
+        "Validation finale..."
+    ];
 
     let progression = 0;
 
     const interval = setInterval(() => {
 
-        progression += 1;
+        progression++;
 
-        barre.style.width =
-            progression + "%";
+        barre.style.width = progression + "%";
 
-        /* Messages */
+        const messageIndex = Math.floor(
+            (progression / 100) * messages.length
+        );
 
-        if (progression === 10)
-            texte.innerText =
-            "Analyse du noyau impérial...";
+        if (messages[messageIndex]) {
 
-        if (progression === 20)
-            texte.innerText =
-            "Vérification des accès...";
-
-        if (progression === 30)
-            texte.innerText =
-            "Décryptage des archives...";
-
-        if (progression === 40)
-            texte.innerText =
-            "Connexion au Cybertron Core...";
-
-        if (progression === 50)
-            texte.innerText =
-            "Chargement des données ARAKISS...";
-
-        if (progression === 60)
-            texte.innerText =
-            "Synchronisation des protocoles...";
-
-        if (progression === 70)
-            texte.innerText =
-            "Ouverture des bases impériales...";
-
-        if (progression === 80)
-            texte.innerText =
-            "Accès aux fichiers classifiés...";
-
-        if (progression === 90)
-            texte.innerText =
-            "Validation finale...";
+            texte.textContent =
+                messages[messageIndex];
+        }
 
         if (progression >= 100) {
 
             clearInterval(interval);
 
-            texte.innerText =
-            "ACCÈS AUTORISÉ";
+            texte.textContent =
+                "ACCÈS AUTORISÉ";
 
             setTimeout(() => {
 
@@ -116,14 +124,14 @@ function lancerChargement() {
                 document.getElementById("dossier")
                     .style.display = "block";
 
-            }, 1200);
+            }, 1500);
         }
 
-    }, 50);
+    }, 180);
 }
 
 /* ===================================== */
-/* ONGLETS */
+/* OUVERTURE DES ONGLETS */
 /* ===================================== */
 
 function ouvrirOnglet(id) {
