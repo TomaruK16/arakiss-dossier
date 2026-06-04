@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Dossier Cybertronien - Arakiss</title>
+    <link rel="stylesheet" href="./Dossier Cybertronien - Arakiss_files/style.css">
+</head>
+
+<body>
+
+<!-- ÉCRAN DE DÉMARRAGE -->
+<div id="ecranDemarrage">
+
+    <div class="terminal">
+        <img src="./Dossier Cybertronien - Arakiss_files/logo.png" class="logo">
+
+        <h1>ACCÈS À LA BASE DE DONNÉES</h1>
+
+        <p id="texteIntro">Êtes-vous certain de vouloir ouvrir ce fichier ?</p>
+
+        <div class="barre">
+            <div class="progression"></div>
+        </div>
+
+        <h2>ARAKISS</h2>
+
+        <p class="sousTitre">Descendant de Nova Prime</p>
+        <p class="danger">⚠ DOSSIER DANGEREUX ⚠</p>
+
+        <button onclick="ouvrirDossier()" style="display: inline-block;">OUI - ACCÉDER AU DOSSIER</button>
+    </div>
+
+</div>
+
+<!-- DOSSIER -->
+<div id="dossier">
+
+    <div class="container">
+
+        <div class="header">
+            <img src="./Dossier Cybertronien - Arakiss_files/logo.png" class="logo">
+            <h1>DOSSIER CYBERTRONIEN</h1>
+        </div>
+
+        <!-- MENU -->
+        <div class="menu">
+            <button onclick="ouvrirOnglet(&#39;infos&#39;, this)">Informations</button>
+            <button onclick="ouvrirOnglet(&#39;psy&#39;, this)">Psychologie</button>
+            <button onclick="ouvrirOnglet(&#39;physique&#39;, this)">Physique</button>
+            <button onclick="ouvrirOnglet(&#39;capacites&#39;, this)">Capacités</button>
+            <button onclick="ouvrirOnglet(&#39;armement&#39;, this)">Armement</button>
+            <button onclick="ouvrirOnglet(&#39;faiblesses&#39;, this)">Faiblesses</button>
+            <button onclick="ouvrirOnglet(&#39;altmode&#39;, this)">Alt-Mode</button>
+            <button onclick="ouvrirOnglet(&#39;histoire&#39;, this)">Histoire</button>
+            <button onclick="ouvrirOnglet(&#39;images&#39;, this)">Images</button>
+        </div>
+
+        <!-- INFOS -->
+        <div id="infos" class="onglet">
+            <div class="section">
+
+                <h2>Informations Générales</h2>
+
+                <p><strong>Désignation :</strong> Arakiss</p>
+                <p><strong>Affiliation :</strong> Neutre</p>
+                <p><strong>Sous-clan :</strong> Imperarcons</p>
+                <p><strong>Rôle :</strong> Empereur / Leader</p>
+                <p><strong>Âge :</strong> 17 millions d'années</p>
+
+            </div>
+        </div>
+
+        <!-- PSYCHOLOGIE -->
+        <div id="psy" class="onglet">
+            <div class="section">
+
+                <h2>PROFIL PSYCHOLOGIQUE</h2>
+
+                <h3>Caractère</h3>
+                <p>
+                    Arakiss est une entité froide, stratégique et extrêmement calculatrice.
+                    Il privilégie toujours la logique, la stabilité et la domination stratégique
+                    plutôt que les émotions ou les idéaux.
+                </p>
+
+                <h3>Vision</h3>
+                <p>
+                    Il considère que Cybertron aurait dû évoluer sous une seule autorité forte
+                    et que les conflits sont la conséquence de la faiblesse politique.
+                </p>
+
+            </div>
+        </div>
+
+        <!-- PHYSIQUE -->
+        <div id="physique" class="onglet">
+            <div class="section">
+
+                <h2>Description Physique</h2>
+
+                <p>
+                    Arakiss mesure environ <strong>10 mètres</strong>, avec une structure massive de classe impériale.
+                </p>
+
+                <p>
+                    Son armure combine blindage militaire Cybertronien et énergie instable verte,
+                    lui donnant une apparence à la fois royale et dangereuse.
+                </p>
+
+                <p>
+                    Ses optiques violettes indiquent une puissance énergétique instable mais parfaitement contrôlée.
+                </p>
+
+            </div>
+        </div>
+
+        <!-- CAPACITÉS -->
+        <div id="capacites" class="onglet">
+            <div class="section">
+
+                <h2>CAPACITÉS</h2>
+
+                <p>Manipulation énergétique et cognitive avancée.</p>
+                <p>Suractivation impériale (augmentation extrême des performances).</p>
+                <p>Régénération assistée par énergie ambiante.</p>
+                <p>Adaptation tactique instantanée en combat.</p>
+                <p>Champ de pression Cybertronien perturbant les ennemis.</p>
+
+            </div>
+        </div>
+
+        <!-- ARMEMENT -->
+        <div id="armement" class="onglet">
+            <div class="section">
+
+                <h2>ARMEMENT</h2>
+
+                <h3>Bouclier "Ailes de Voltron"</h3>
+                <p>
+                    Les ailes cybertroniennes d’Arakiss se reconfigurent en structure défensive énergétique.
+                    Ce bouclier peut absorber et disperser des attaques de très haute intensité.
+                </p>
+
+                <h3>Épée de Nova Prime</h3>
+                <p>
+                    Arme ancestrale héritée directement de Nova Prime.
+                    Elle canalise une énergie pure capable de trancher presque toute matière connue.
+                </p>
+
+                <h3>Lames d’avant-bras</h3>
+                <p>
+                    Lames énergétiques rétractables intégrées aux avant-bras,
+                    utilisées pour les combats rapprochés rapides et létaux.
+                </p>
+
+            </div>
+        </div>
+
+        <!-- FAIBLESSES -->
+        <div id="faiblesses" class="onglet">
+            <div class="section">
+
+                <h2>FAIBLESSES</h2>
+
+                <p>Surcharge énergétique lors de la Suractivation Impériale.</p>
+                <p>Résistance mentale élevée chez certaines cibles avancées.</p>
+                <p>Besoin de concentration totale pour les capacités avancées.</p>
+                <p>Vulnérabilité accrue pendant la régénération.</p>
+
+            </div>
+        </div>
+
+        <!-- ALT-MODE -->
+        <div id="altmode" class="onglet">
+            <div class="section">
+
+                <h2>ALT-MODE</h2>
+
+                <h3>Mode terrestre : Camion blindé Cybertronien</h3>
+
+                <p>
+                    Arakiss adopte un mode terrestre inspiré d’un camion longue distance de type
+                    Western Star 5700 XE, version Cybertronienne profondément modifiée.
+                </p>
+
+                <p>
+                    Ce véhicule est renforcé par un blindage militaire lourd et alimenté par une énergie instable verte,
+                    avec des teintes vertes et violettes symbolisant son statut impérial.
+                </p>
+
+                <hr>
+
+                <h3>Mode aérien : SU-57 Cybertronien</h3>
+
+                <p>
+                    Son second alt-mode est basé sur un chasseur furtif SU-57 Cybertronien.
+                    Il excelle dans les frappes rapides, la reconnaissance et la domination aérienne.
+                </p>
+
+                <p>
+                    Cette forme lui permet de passer d’un assaut terrestre massif à une supériorité aérienne instantanée.
+                </p>
+
+            </div>
+        </div>
+
+        <!-- HISTOIRE -->
+        <div id="histoire" class="onglet">
+            <div class="section">
+
+                <h2>HISTOIRE</h2>
+
+                <h3>Origines : L’héritier de Nova Prime</h3>
+
+                <p>
+                    Arakiss naît dans les hautes sphères de Cybertron, au sein d’une élite destinée à gouverner.
+                    Très tôt, il montre des capacités intellectuelles et stratégiques hors normes.
+                </p>
+
+                <p>
+                    Repéré par le légendaire Nova Prime, il est pris sous sa protection et formé personnellement.
+                    Nova Prime voit en lui un futur successeur capable de maintenir l’ordre sur Cybertron.
+                </p>
+
+                <p>
+                    Arakiss grandit ainsi dans un environnement mêlant guerre, diplomatie et manipulation politique,
+                    devenant un stratège redoutable et un futur leader naturel.
+                </p>
+
+                <hr>
+
+                <h3>La disparition de Nova Prime et la trahison du Sénat</h3>
+
+                <p>
+                    Lors d’une mission d’exploration, Nova Prime disparaît mystérieusement avec son vaisseau,
+                    laissant Cybertron sans dirigeant clair.
+                </p>
+
+                <p>
+                    Arakiss, légitime successeur, pense naturellement prendre la relève.
+                    Mais le Sénat Cybertronien refuse son accession au trône et désigne un autre Prime.
+                </p>
+
+                <p>
+                    Considérant cela comme une trahison de l’héritage de Nova Prime, Arakiss est écarté du pouvoir
+                    et forcé de rester dans l’ombre avec ses alliés les plus fidèles.
+                </p>
+
+                <hr>
+
+                <h3>La guerre civile et l’exil</h3>
+
+                <p>
+                    Des millions d’années plus tard, Cybertron sombre dans une guerre civile entre Autobots et Decepticons.
+                </p>
+
+                <p>
+                    Refusant de choisir un camp qu’il juge imparfait, Arakiss adopte une position neutre.
+                    Depuis l’ombre, il orchestre néanmoins des opérations contre les deux factions,
+                    visant à affaiblir un système qu’il considère corrompu.
+                </p>
+
+                <p>
+                    Ses actions provoquent la peur des deux camps, et il est finalement déclaré ennemi de Cybertron.
+                    Arakiss et ses partisans sont bannis de la planète.
+                </p>
+
+                <hr>
+
+                <h3>L’ascension de l’Empire des Imperarcons</h3>
+
+                <p>
+                    Après un long exil spatial, Arakiss découvre une planète ancienne autrefois influencée par l’empire de Nova Prime.
+                </p>
+
+                <p>
+                    Cette planète est tombée sous le contrôle d’un dictateur brutal ignorant l’histoire réelle de son monde.
+                    Arakiss décide d’intervenir et déclenche une révolution à grande échelle.
+                </p>
+
+                <p>
+                    Après des siècles de guerre, il renverse le régime et devient empereur.
+                    Il fonde la faction des Imperarcons et transforme la planète en vaisseau-mère mobile.
+                </p>
+
+                <hr>
+
+                <h3>L’âge d’or et le retour vers Cybertron</h3>
+
+                <p>
+                    Sous son règne, l’empire entre dans un âge d’or basé sur la conquête, la technologie et l’expansion.
+                </p>
+
+                <p>
+                    Plus tard, Arakiss apprend l’existence d’une guerre sur Terre et découvre une vérité majeure :
+                    Cybertron se trouve désormais dans l’atmosphère terrestre.
+                </p>
+
+                <p>
+                    Il envoie une expédition sur Terre et laisse la régence à son amant afin de maintenir l’empire.
+                </p>
+
+                <p>
+                    Son objectif final devient clair : reprendre Cybertron et restaurer son héritage en tant que véritable successeur de Nova Prime.
+                </p>
+
+            </div>
+        </div>
+
+        <!-- IMAGES -->
+        <div id="images" class="onglet">
+            <div class="section">
+                <h2>Images</h2>
+                <img src="./Dossier Cybertronien - Arakiss_files/robot.png" width="300">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="./Dossier Cybertronien - Arakiss_files/script.js.téléchargé"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
